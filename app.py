@@ -22,7 +22,7 @@ def des_weather(data, openai_api_key):
         prompt = f"The Current Weather in your city is {description} with {temperature: .2f} Degree Celsius. Tell me what to wear in this weather and explain the weather for all general audiences."
 
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",  # Updated for the chat-based completion
+            model="gpt-3.5-turbo",  
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
